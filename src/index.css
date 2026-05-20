@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================= BASE VARIABLES ================= */
+@layer base {
+  :root {
+    --background: 0 0% 95%;
+    --foreground: 0 0% 7%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+
+    --primary: 220 100% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 47 100% 50%;
+    --accent-foreground: 0 0% 7%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 88%;
+    --input: 0 0% 88%;
+    --ring: 220 100% 52%;
+
+    --radius: 0.75rem;
+
+    /* 🔥 Optimized gradients (lighter) */
+    --hero-gradient: linear-gradient(135deg, hsl(220 60% 25%), hsl(260 50% 40%));
+    --cta-gradient: linear-gradient(135deg, hsl(47 100% 50%), hsl(42 90% 45%));
+
+    /* 🔥 Optimized shadows (reduced blur = better performance) */
+    --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.08);
+    --shadow-elevated: 0 6px 20px rgba(0, 0, 0, 0.12);
+    --shadow-cta: 0 2px 12px rgba(255, 200, 0, 0.35);
+  }
+
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 220 100% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 90%;
+    --secondary-foreground: 0 0% 7%;
+    --accent: 47 100% 50%;
+    --accent-foreground: 0 0% 7%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 220 100% 60%;
+  }
+}
+
+/* ================= BASE STYLES ================= */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+
+    /* 🔥 Fast font fallback */
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont,
+                 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+
+    /* Heading font */
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+}
+
+/* ================= COMPONENTS ================= */
+@layer components {
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+
+  .cta-gradient {
+    background: var(--cta-gradient);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-cta {
+    box-shadow: var(--shadow-cta);
+  }
+}
+
+/* ================= UTILITIES ================= */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

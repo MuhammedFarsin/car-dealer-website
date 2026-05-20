@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- BASIC SETUP -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BRAND TITLE -->
+    <title>BrandWox – UK Used Car Dealer Marketing Agency</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/logo-icon.webp" />
+    <link rel="apple-touch-icon" href="/logo-icon.webp" />
+
+    <!-- PRIMARY META -->
+    <meta
+      name="description"
+      content="BrandWox is a UK-focused digital marketing brand helping used car dealerships generate more buyer enquiries with landing pages, dealer websites, and Meta advertising."
+    />
+    <meta name="author" content="BrandWox" />
+
+    <!-- CANONICAL -->
+    <link rel="canonical" href="https://brandwox-uk-dealers.netlify.app/" />
+
+    <!-- FIX #1: preconnect MUST come before the font stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- FIX #2: Google Fonts loaded with display=swap (already had it — good!) -->
+    <!-- FIX #3: Added media="print" trick to load fonts non-render-blocking -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Fallback for no-JS -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@400;600&display=swap"
+      />
+    </noscript>
+
+    <!-- NOTE: hero image preload removed — Vite hashes filenames so static preload fetches wrong file -->
+    <!-- fetchpriority="high" is set directly on the <img> tag in HeroSection.tsx instead -->
+
+    <!-- OPEN GRAPH -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="BrandWox" />
+    <meta
+      property="og:title"
+      content="BrandWox – UK Used Car Dealer Marketing Agency"
+    />
+    <meta
+      property="og:description"
+      content="BrandWox helps UK used car dealers get more buyer enquiries through high-converting websites, landing pages, and targeted advertising campaigns."
+    />
+    <meta
+      property="og:image"
+      content="https://brandwox-uk-dealers.netlify.app/website-preview.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://brandwox-uk-dealers.netlify.app/"
+    />
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="BrandWox – UK Used Car Dealer Marketing Agency"
+    />
+    <meta
+      name="twitter:description"
+      content="A digital marketing brand for UK used car dealerships focused on lead generation and high-converting websites."
+    />
+    <meta
+      name="twitter:image"
+      content="https://brandwox-uk-dealers.netlify.app/website-preview.webp"
+    />
+
+    <!-- STRUCTURED DATA (BRAND IDENTITY) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Brand",
+        "name": "BrandWox",
+        "url": "https://brandwox-uk-dealers.netlify.app/",
+        "logo": "https://brandwox-uk-dealers.netlify.app/logo-icon.webp",
+        "description": "BrandWox is a digital marketing brand for UK used car dealerships.",
+        "sameAs": [
+          "https://www.facebook.com/profile.php?id=61581401774628",
+          "https://www.instagram.com/brandwox.uk/"
+        ]
+      }
+    </script>
+
+    <!-- FIX #5: Meta Pixel deferred — already good! Kept as is -->
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          !(function (f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function () {
+              n.callMethod
+                ? n.callMethod.apply(n, arguments)
+                : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = true;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+          })(
+            window,
+            document,
+            "script",
+            "https://connect.facebook.net/en_US/fbevents.js"
+          );
+
+          fbq("init", "2041072573330202");
+          fbq("track", "PageView");
+        }, 3000);
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- NO-SCRIPT PIXEL -->
+    <noscript>
+      <img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=2041072573330202&ev=PageView&noscript=1"
+      />
+    </noscript>
+
+    <!-- ROOT APP -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

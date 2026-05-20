@@ -1,0 +1,15 @@
+{
+  "name": "BrandWox",
+  "short_name": "BrandWox",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B1C2D",
+  "theme_color": "#0B1C2D",
+  "icons": [
+    {
+      "src": "/logo-icon.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    }
+  ]
+}
